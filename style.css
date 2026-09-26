@@ -1,0 +1,294 @@
+/* ---------- Basic Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f3e8ff, #e0f0ff);
+    color: #3a2e5c;
+    min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+.header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    color: #6a3fbf;
+}
+
+.tagline {
+    margin-top: 8px;
+    font-style: italic;
+    color: #6b5a91;
+}
+
+/* ---------- Home Page ---------- */
+.home-main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.emoji-row {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.description {
+    background: #ffffffaa;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: #8a5cf6;
+    color: white;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #6a3fbf;
+    border: 2px solid #8a5cf6;
+}
+
+.btn-choice {
+    background: #ffffff;
+    color: #6a3fbf;
+    border: 2px solid #c9b6f0;
+}
+
+.btn-choice.active {
+    background: #8a5cf6;
+    color: white;
+}
+
+.back-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+}
+
+/* ---------- Popup (Secret Message / Confirmation) ---------- */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.message-text {
+    font-style: italic;
+    background: #f6f0ff;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+/* ---------- Create Capsule Page ---------- */
+.create-main {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.choice-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.capsule-form {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.capsule-form label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.capsule-form input,
+.capsule-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d8cdf0;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.capsule-form .btn {
+    margin-top: 20px;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6b5a91;
+    text-align: center;
+}
+
+/* ---------- My Capsules Page ---------- */
+.capsules-main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.capsule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.capsule-card {
+    background: white;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.capsule-card h3 {
+    margin-bottom: 8px;
+    color: #6a3fbf;
+}
+
+.capsule-card p {
+    margin: 4px 0;
+}
+
+.status-locked {
+    color: #b8860b;
+    font-weight: bold;
+}
+
+.status-unlocked {
+    color: #2e8b57;
+    font-weight: bold;
+}
+
+.countdown {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #6a3fbf;
+}
+
+.card-buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.delete-btn {
+    background: #ffe0e0;
+    color: #c0392b;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #ffcccc;
+}
+
+/* ---------- Open Capsule Page ---------- */
+.open-main {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.open-main .popup-card {
+    animation: none;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 500px) {
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .button-group,
+    .choice-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
